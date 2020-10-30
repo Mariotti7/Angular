@@ -16,7 +16,7 @@ ul.social-network {
   }
   
   .faGithub, .faLinkedin, .faInstagram{
-      color: white;
+      color:#1E6B6B;
   }
   
   .faGithub:hover{
@@ -38,4 +38,8 @@ ul.social-network {
 
  .b-color{
      background-color: #1E6B6B;
+ }
+
+ .b-footer{
+     background-color: #272727;
  }

@@ -1,8 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap");
 
-p{
-    font-family: 'Syne Tactile', cursive;
-    font-size: 50pt;
-
+.texto {
+  font-family: "Syne Tactile", cursive;
 }
 
+.parallax {
+
+ background-image: url('/assets/img/Sad-Clown.jpg');
+  min-height: 500px;
+
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
