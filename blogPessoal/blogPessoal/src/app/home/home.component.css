@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
 
 .texto {
   font-family: "Syne Tactile", cursive;
+  font-size: 40pt;
 }
 
 .parallax {
 
- background-image: url('/assets/img/Sad-Clown.jpg');
+ background-image: url('/assets/img/sun-9.gif');
   min-height: 500px;
 
   
@@ -14,4 +16,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.ptext{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14pt;
 }

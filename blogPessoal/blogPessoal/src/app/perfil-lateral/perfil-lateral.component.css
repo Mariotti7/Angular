@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+.txtnome{
+    font-family: 'Source Code Pro', monospace;
+}
+
+.txtdescr{
+    font-family: 'Dosis', sans-serif;
+    font-size: 15pt;
+}
+
+.btn-outline-instagram{
+    background-color: #ffffff;
+
+    color: #c21974;
+
+    border-color:#c21974;
+}
+
+.btn-outline-instagram:hover{
+    background: linear-gradient(to right, #dd5e89, #f7bb97);
+    color: #ffffff;
+}
+
+.btn-outline-linkedin{
+
+    background-color: #ffffff;
+
+    color: #4286f4;
+
+    border-color: #4286f4;
+}
+
+.btn-outline-linkedin:hover{
+
+    background: linear-gradient(to right, #4e67a1, #4286f4);
+    color: #ffffff;
+}
+
+.btn-outline-github{
+
+    background-color: #ffffff;
+
+    color: #4F4F4F;
+
+    border-color: #4F4F4F;
+}
+
+.btn-outline-github:hover{
+
+    background: linear-gradient(to right, #798382,#4F4F4F);
+    color: #ffffff;
+}

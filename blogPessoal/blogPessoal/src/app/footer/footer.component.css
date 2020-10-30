@@ -16,19 +16,19 @@ ul.social-network {
   }
   
   .faGithub, .faLinkedin, .faInstagram{
-      color:#1E6B6B;
+      color: #209DD3 ;
   }
   
   .faGithub:hover{
-    color: #3b5998;
+    color: #0152ff;
   }
   
   .faLinkedin:hover{
-  color: #0072b1;
+  color: #092c3f;
   }
   
   .faInstagram:hover{
-  color: #C13584;
+  color: #af116a;
   }
 
   .texto{
@@ -37,9 +37,12 @@ ul.social-network {
   }
 
  .b-color{
-     background-color: #1E6B6B;
+   
+     background: linear-gradient(to right, #484848, #209DD3);
+     color: #ffffff;
  }
 
  .b-footer{
-     background-color: #272727;
+  background: linear-gradient(to right, #484848,#1B1B1B);
+  color: #ffffff;
  }
