@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+.botao{
+    border-radius: 10px; box-shadow: 5px 10px #888888;
+    background: linear-gradient(to right, #FFE001, #FEBB02, #FF9002);
+}
+.botao:hover{
+    color:#FFE001;
+    background-color:#FFE001;
+    background: linear-gradient(to right, #FEFFEF, #F0FFFF, #FFF8DC);
+}
+
+.txt{
+    font-family: 'Itim', cursive;
+}

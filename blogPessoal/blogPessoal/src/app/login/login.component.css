@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap');
+
+#b-sg {
+  position: relative;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f0f0ea;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.botao{
+  border-radius: 10px; box-shadow: 5px 10px #888888;
+  background: linear-gradient(to right, #58B9EB, #219CD7, #006A9C);
+}
+.botao:hover{
+  color: #006A9C;
+  background-color:#006A9C;
+  background: linear-gradient(to right, #FEFFEF, #F0FFFF, #FFF8DC);
+}
+
+#login{
+  font-family: 'Itim', cursive;
+  font-size: 25pt;
+}
+
+.txt{
+  font-family: 'Spectral SC', serif;
+}
