@@ -17,19 +17,18 @@
               <input
                 type="email"
                 id="inputEmail"
+                name='inputEmail'
                 class="form-control"
                 placeholder="Usuário Email"
-                required
-                autofocus
-              />
+                [(ngModel)]='userLogin.usuario'>
               <label for="inputPassword" class="sr-only">Senha</label>
               <input
                 type="password"
                 id="inputPassword"
+                name='inputPassword'
                 class="form-control"
                 placeholder="Senha"
-                required
-              />
+                [(ngModel)]='userLogin.senha'>
               <div class="checkbox mb-3">
                 <label>
                   <input type="checkbox" value="lembrar" />
@@ -42,8 +41,7 @@
               <button
                 class="btn btn-lg btn-primary btn-block botao"
                 type="submit"
-                onclick="entrar()"
-              >
+                (click)="entrar()">
                 ENTRAR
               </button>
               <p class="mt-5 mb-3 text-muted text-center">© 2020-2021</p>

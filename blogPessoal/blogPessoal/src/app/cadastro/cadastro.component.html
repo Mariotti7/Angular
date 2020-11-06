@@ -1,79 +1,41 @@
-<div class="container d-flex justify-content-center">
-  <div class="row">
-    <div class="col-md-12">
-      <form>
-        <hr />
-        <h3 class="text-center txt">CADASTRO</h3>
-        <hr />
-        <div class="form-group row">
-          <label for="inputNome" class="col-sm-2 col-form-label">Nome</label>
-          <div class="col-sm-10">
-            <input
-              type="text"
-              class="form-control"
-              id="inputNome"
-              name='inputNome'
-              placeholder="Nome"
-              [(ngModel)]="user.nome"
-            />
+<div _ngcontent-jpq-c87 class=" container col-md-5 card mt-4 border-0 mb-25">
+  <div class="row mt5 mb5">
+      <div class="col-md-12">
+          <h1 class="text-center">Cadastrar</h1>
+      </div>
+  </div>
+  <div class="row mb-5 d-flex justify-content-center">
+      <div class="col-md-8">
+          <div>
+              <div class="form-group">
+                  <label for="nome">Nome</label>
+                  <input type="text" class="form-control" id="nome"
+                  placeholder="Digite Seu Nome" [(ngModel)]='user.nome' >
+              </div>
+              <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email"
+                  placeholder="nome@exemplo.com" [(ngModel)]='user.usuario' >
+              </div>
+              <div class="form-group">
+                  <label for="senha">Senha</label>
+                  <input type="password" class="form-control" id="senha"
+                  placeholder="Digite Sua Senha" (input)='conferirSenha($event)' value="{{senha}}">
+              </div>
+              <div class="form-group">
+                  <label for="senhaConf">Confirmar Senha</label>
+                  <input type="password" class="form-control" id="senhaConf"
+                  placeholder="Confirme Sua Senha" [(ngModel)]='user.senha'>
+              </div>
+              <div class="d-flex justify-content-center">
+                  <button class="btn btn-primary " (click)='cadastrar()'>Cadastrar</button>
+
+              </div>
+          
+              
+
+              
           </div>
-        </div>
-        <div class="form-group row">
-          <label for="inputEmai" class="col-sm-2 col-form-label">Email</label>
-          <div class="col-sm-10">
-            <input
-              type="email"
-              class="form-control"
-              id="inputEmai"
-              name='inputEmai'
-              placeholder="Email"
-              [(ngModel)]="user.usuario"
-            />
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="inputPassword" class="col-sm-2 col-form-label"
-            >Senha</label
-          >
-          <div class="col-sm-10">
-            <input
-              type="password"
-              class="form-control"
-              id="inputPassword"
-              name='inputPassword'
-              placeholder="Senha"
-              (input)="conferirSenha($event)"
-              value="{{senha}}"
-            />
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="inputConfPass" class="col-sm-2 col-form-label"
-            >Confirmar Senha</label
-          >
-          <div class="col-sm-10">
-            <input
-              type="password"
-              class="form-control"
-              id="inputConfPass"
-              name='inputConfPass'
-              placeholder="Confirmar Senha"
-              [(ngModel)]="user.senha"
-            />
-          </div>
-        </div>
-        <div class="container d-flex justify-content-center">
-          <div class="form-group row">
-            <div class="col-sm-10 jus">
-              <button
-                type="submit"
-                class="btn btn-warning font-weight-bold botao"
-                style="box-shadow: 5px 5px #888888"
-                (click)="cadastrar()">CADASTRAR</button>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
+      </div>
   </div>
 </div>
