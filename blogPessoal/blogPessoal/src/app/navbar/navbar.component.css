@@ -5,3 +5,11 @@
     letter-spacing: .2rem;
     font-family: 'Syne Mono', monospace;
 }
+
+a{
+    cursor: pointer;
+}
+
+navback{
+    background: white;
+}

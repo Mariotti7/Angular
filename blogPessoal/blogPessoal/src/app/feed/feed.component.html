@@ -4,7 +4,7 @@
       <app-perfil-lateral></app-perfil-lateral>
     </div>
     <div class="col-md-8">
-      <h3 class="text-center mb-4 txtheadline">Como Tem Sido a Sua Experiência?</h3>
+      <h3 class="text-center mb-4 txtheadline pt-3">Como Tem Sido a Sua Experiência?</h3>
 
       <div class="form-group">
         <label class="text-monospace" for="titulo">Título:</label>
@@ -12,7 +12,7 @@
           type="text"
           class="form-control"
           id="titulo"
-          placeholder="Digite Seu Título"
+          placeholder="Digite Seu Título" [(ngModel)]='postagem.titulo'
         />
       </div>
 
@@ -22,7 +22,7 @@
           class="form-control"
           id="texto"
           rows="3"
-          placeholder="Digite Seu Texto"
+          placeholder="Digite Seu Texto" [(ngModel)] = 'postagem.texto'
         ></textarea>
       </div>
 
@@ -31,15 +31,17 @@
           <div class="form-group m-0">
             <label class="text-monospace" for="tema"
               >Escolha um Tema ou
-              <a routerLink="/cadastrar-tema">Cadastre um Novo</a></label
+              <a routerLink="/cadastro-tema">Cadastre um Novo</a></label
             >
-            <select name="tema" id="tema" class="form-control">
-              <option>Teste 123</option>
+            <select name="tema" id="tema" class="form-control" [(ngModel)] = 'idTema' (change)='findByIdTema()'>
+              <option *ngFor='let item of listaTemas' value={{item.id}}>
+                {{item.descricao}}
+              </option>
             </select>
           </div>
         </div>
         <div class="col-md-6 d-flex justify-content-end">
-          <button type="button" class="btn btn-info w-25">
+          <button type="button" class="btn btn-info w-25" (click)='publicar()'>
             Publicar
           </button>
         </div>
@@ -93,6 +95,37 @@
               <button class="btn btn-warning w-100" type="button">
                 Pesquisar
               </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card mt-5 mb-5"  *ngFor="let item of listaPostagens | orderBy : key : reverse">
+                <div class="card-header">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-md-8">
+                            <h5 class="card-title"> {{item.titulo}} </h5>
+                            <small>Tema: {{item.tema.descricao}} </small>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+
+                          <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-post', item.id]">
+                              Editar
+                          </button>
+
+                          <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-post', item.id]">
+                              Apagar
+                          </button>
+
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card-body" >
+                <p class="card-text" aria-describedby="texto"> {{item.texto}} </p>
+                <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
+                  Postado em {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date:'HH:mm'}}</small>
+              </div>
+          </div>
             </div>
           </div>
         </div>
