@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +21,7 @@ import { PutPostagemComponent } from './put-postagem/put-postagem.component';
 import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
 import { PutTemaComponent } from './put-tema/put-tema.component';
 import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
+import { AlertasComponent } from './alertas/alertas.component';
 
 
 @NgModule({
@@ -35,7 +38,8 @@ import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
     PutPostagemComponent,
     DeletePostagemComponent,
     PutTemaComponent,
-    DeleteTemaComponent
+    DeleteTemaComponent,
+    AlertasComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,11 @@ import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    OrderModule
+    OrderModule,
+    ModalModule.forRoot()
+
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

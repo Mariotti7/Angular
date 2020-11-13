@@ -34,4 +34,8 @@ return this.http.post('http://localhost:8081/postagem', postagem, this.token)
     return this.http.delete(`http://localhost:8081/postagem/${id}`, this.token)
   }
 
+  getByTituloPostagem(titulo: string){
+    return this.http.get(`http://localhost:8081/postagem/titulo/${titulo}`, this.token)
+  }
+
 }
