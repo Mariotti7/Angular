@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../model/User';
 import { UserLogin } from '../model/UserLogin';
 import { AuthService } from '../service/auth.service';
 
@@ -10,15 +9,22 @@ import { AuthService } from '../service/auth.service';
 })
 export class PerfilLateralComponent implements OnInit {
 
-  nome:string
+  userName: UserLogin = new UserLogin()
 
-  constructor() { }
+  constructor(
+    private auth: AuthService
+  ) { }
 
   ngOnInit(){
-
-    this.nome = 'Manuel'
-
+  this.userName.usuario = localStorage.getItem('usuario')
   }
 
+  user(){
+    this.auth.logar(this.userName).subscribe((resp: UserLogin)=>{
+      this.userName = resp
+      localStorage.setItem('usuario', this.userName.usuario)
+    })
+  }
+  
 
 }
